@@ -1,0 +1,4 @@
+<div class="countdown" data-until="{{ instance.until_utc|date:'Y,n,j,H,i,s,e' }}" data-expiry-text="{{ instance.expiry_text|default_if_none:'null' }}">
+  <p>{{ instance.title }}</p>
+  <span class="timer"></span>
+</div>

@@ -1,0 +1,55 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-09 17:48+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: content_plugins.py:26
+msgid "Sidebar widgets"
+msgstr ""
+
+#: models.py:11
+msgid "Title"
+msgstr "Titel"
+
+#: models.py:13
+msgid "Count to"
+msgstr "Aftellen tot"
+
+#: models.py:14
+msgid "Format"
+msgstr "Formaat"
+
+#: models.py:14
+msgid ""
+"y=year, o=months, w=weeks, d=days, h=hours, m=minutes, s=seconds. Uppercase "
+"means it's always visible."
+msgstr ""
+"y=jaar, o=maanden, w=weken, d=dagen, h=uren, m=minuten, s=seconden. "
+"Een hoofletter betekend dat het altijd zichtbaar is."
+
+#: models.py:15
+msgid "Expiry text"
+msgstr "Tekst bij afloop"
+
+#: models.py:18
+msgid "Count-down timer"
+msgstr "Aftel-timer"
+
+#: models.py:19
+msgid "Count-down timers"
+msgstr "Aftel-timers"

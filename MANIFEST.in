@@ -1,0 +1,12 @@
+include AUTHORS
+include README.rst
+include LICENSE
+recursive-include fluentcms_countdown/locale *
+recursive-include fluentcms_countdown/templates *.html
+recursive-include fluentcms_countdown/static *
+global-exclude .DS_Store
+global-exclude Thumbs.db
+global-exclude Desktop.ini
+global-exclude *.swp
+global-exclude *~
+global-exclude *.bak
