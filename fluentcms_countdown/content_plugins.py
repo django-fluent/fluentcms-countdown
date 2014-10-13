@@ -1,19 +1,8 @@
-from django.conf import settings
 from django.forms import Media
 from django.utils.translation import ugettext_lazy as _
 from fluent_contents.extensions import ContentPlugin, plugin_pool
 from .models import CountDownItem
 from . import appsettings
-
-# Make sure only known languages are submitted to the client.
-JS_LANGUAGE_CODES = (
-    'ar', 'bg', 'bn', 'bs', 'ca', 'cs', 'cy', 'da', 'de', 'el', 'es', 'et', 'fa', 'fi', 'fo', 'fr',
-    'gl', 'gu', 'he', 'hr', 'hu', 'hy', 'id', 'is', 'it', 'ja', 'kn', 'ko', 'lt', 'lv', 'ml', 'ms',
-    'my', 'nb', 'nl', 'pl', 'pt-BR', 'ro', 'ru', 'sk', 'sl', 'sq', 'sr-SR', 'sr', 'sv', 'th', 'tr',
-    'uk', 'ur', 'uz', 'vi', 'zh-CN', 'zh-TW',
-)
-
-
 
 
 @plugin_pool.register
@@ -35,9 +24,9 @@ class CountDownPlugin(ContentPlugin):
 
         # Localize for the given instance
         language, locale = _to_locale_name(instance.language_code)
-        if locale in JS_LANGUAGE_CODES:
+        if locale in appsettings.COUNTDOWN_JS_LANGUAGE_CODES:
             js.append(appsettings.JQUERY_COUNTDOWN_LOCALE_JS.format(locale=locale))
-        elif language in JS_LANGUAGE_CODES:
+        elif language in appsettings.COUNTDOWN_JS_LANGUAGE_CODES:
             js.append(appsettings.JQUERY_COUNTDOWN_LOCALE_JS.format(locale=language))
 
         # And the main script
