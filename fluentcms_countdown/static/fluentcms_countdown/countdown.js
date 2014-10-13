@@ -14,7 +14,6 @@
             if(until && until.indexOf(':') != -1) {
                 options['until'] = _parseDate(until);
             }
-            console.log(options);
 
             $countdown.find('.timer').countdown(options);
         }
