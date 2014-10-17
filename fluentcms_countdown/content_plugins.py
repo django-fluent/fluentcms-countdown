@@ -48,7 +48,7 @@ def _to_locale_name(language_code):
     # The locale uses a dash instead of _, to match the vendor filenames.
     language_code =language_code.replace('_', '-')
     if '-' in language_code:
-        language, country = language_code.split()
+        language, country = language_code.split('-')
         return language_code, "{0}-{1}".format(language, country.upper())
     else:
         return language_code, language_code
