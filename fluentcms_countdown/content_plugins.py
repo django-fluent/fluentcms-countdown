@@ -36,7 +36,11 @@ class CountDownPlugin(ContentPlugin):
         js = [file for file in js if file]
 
         # No CSS, provide your own styling.
-        return Media(js=js)
+        media = Media(js=js)
+
+        # Extra: allow developers to override this plugin, and extend the `class FrontendMedia` code.
+        base = super(CountDownPlugin, self).get_frontend_media(instance)  # reads frontend_media
+        return base + media
 
 
 def _to_locale_name(language_code):
