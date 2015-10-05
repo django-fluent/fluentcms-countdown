@@ -38,7 +38,7 @@ def find_version(*parts):
 setup(
     name='fluentcms-countdown',
     version=find_version('fluentcms_countdown', '__init__.py'),
-    license='Apache License, Version 2.0',
+    license='Apache 2.0',
 
     install_requires=[
         'django-fluent-contents>=v1.0c2',   # Need frontend_media support.
