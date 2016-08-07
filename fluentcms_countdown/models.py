@@ -1,9 +1,11 @@
 from django.db import models
+from django.utils.six import python_2_unicode_compatible
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import utc
 from fluent_contents.models import ContentItem
 
 
+@python_2_unicode_compatible
 class CountDownItem(ContentItem):
     """
     Count-down timer to a deadline
@@ -18,7 +20,7 @@ class CountDownItem(ContentItem):
         verbose_name = _("Count-down timer")
         verbose_name_plural = _("Count-down timers")
 
-    def __unicode__(self):
+    def __str__(self):
         return self.title
 
     @property
