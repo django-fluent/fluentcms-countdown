@@ -39,7 +39,7 @@ setup(
     license='Apache 2.0',
 
     install_requires=[
-        'django-fluent-contents>=v1.0c2',   # Need frontend_media support.
+        'django-fluent-contents>=1.0',   # Need frontend_media support.
     ],
     requires=[
         'Django (>=1.4)',
