@@ -14,7 +14,7 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='CountDownItem',
             fields=[
-                ('contentitem_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='fluent_contents.ContentItem')),
+                ('contentitem_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='fluent_contents.ContentItem', on_delete=models.CASCADE)),
                 ('title', models.CharField(max_length=200, verbose_name='Title')),
                 ('until', models.DateTimeField(verbose_name='Count to')),
                 ('format', models.CharField(default=b'dHMS', help_text="y=year, o=months, w=weeks, d=days, h=hours, m=minutes, s=seconds. Uppercase means it's always visible.", max_length=15, verbose_name='Format')),
