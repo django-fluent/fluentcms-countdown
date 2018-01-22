@@ -1,6 +1,13 @@
 Changelog
 =========
 
+Version 1.2 (2018-01-22)
+------------------------
+
+* Added Django 2.0 support
+* Removed Django 1.6 support.
+
+
 Version 1.1.1 (2017-02-19)
 --------------------------
 
