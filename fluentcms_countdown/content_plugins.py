@@ -1,5 +1,5 @@
 from django.forms import Media
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from fluent_contents.extensions import ContentPlugin, plugin_pool
 from .models import CountDownItem
 from . import appsettings
