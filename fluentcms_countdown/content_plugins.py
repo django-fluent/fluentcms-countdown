@@ -39,7 +39,7 @@ class CountDownPlugin(ContentPlugin):
         media = Media(js=js)
 
         # Extra: allow developers to override this plugin, and extend the `class FrontendMedia` code.
-        base = super(CountDownPlugin, self).get_frontend_media(instance)  # reads frontend_media
+        base = super().get_frontend_media(instance)  # reads frontend_media
         return base + media
 
 
@@ -49,6 +49,6 @@ def _to_locale_name(language_code):
     language_code = language_code.replace('_', '-')
     if '-' in language_code:
         language, country = language_code.split('-')
-        return language_code, "{0}-{1}".format(language, country.upper())
+        return language_code, f"{language}-{country.upper()}"
     else:
         return language_code, language_code

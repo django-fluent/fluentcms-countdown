@@ -3,8 +3,8 @@ from django.conf import settings
 _js_min = "" if settings.DEBUG else ".min"
 
 # Default values
-JQUERY_PLUGIN_JS = 'fluentcms_countdown/vendor/jquery.plugin{0}.js'.format(_js_min)
-JQUERY_COUNTDOWN_JS = 'fluentcms_countdown/vendor/jquery.countdown{0}.js'.format(_js_min)
+JQUERY_PLUGIN_JS = f'fluentcms_countdown/vendor/jquery.plugin{_js_min}.js'
+JQUERY_COUNTDOWN_JS = f'fluentcms_countdown/vendor/jquery.countdown{_js_min}.js'
 JQUERY_COUNTDOWN_LOCALE_JS = 'fluentcms_countdown/vendor/jquery.countdown-{locale}.js'
 COUNTDOWN_JS = 'fluentcms_countdown/countdown.js'
 
