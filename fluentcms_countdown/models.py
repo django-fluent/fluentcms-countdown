@@ -1,6 +1,6 @@
 from django.db import models
-from django.utils.translation import gettext_lazy as _
 from django.utils.timezone import utc
+from django.utils.translation import gettext_lazy as _
 from fluent_contents.models import ContentItem
 
 
@@ -8,10 +8,18 @@ class CountDownItem(ContentItem):
     """
     Count-down timer to a deadline
     """
+
     title = models.CharField(_("Title"), max_length=200)
 
     until = models.DateTimeField(_("Count to"))
-    format = models.CharField(_("Format"), max_length=15, default='dHMS', help_text=_("y=year, o=months, w=weeks, d=days, h=hours, m=minutes, s=seconds. Uppercase means it's always visible."))
+    format = models.CharField(
+        _("Format"),
+        max_length=15,
+        default="dHMS",
+        help_text=_(
+            "y=year, o=months, w=weeks, d=days, h=hours, m=minutes, s=seconds. Uppercase means it's always visible."
+        ),
+    )
     expiry_text = models.CharField(_("Expiry text"), max_length=200, blank=True, null=True)
 
     class Meta:

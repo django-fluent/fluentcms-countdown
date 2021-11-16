@@ -1,8 +1,9 @@
 from django.forms import Media
 from django.utils.translation import gettext_lazy as _
 from fluent_contents.extensions import ContentPlugin, plugin_pool
-from .models import CountDownItem
+
 from . import appsettings
+from .models import CountDownItem
 
 
 @plugin_pool.register
@@ -10,6 +11,7 @@ class CountDownPlugin(ContentPlugin):
     """
     Count-down timer for a deadline
     """
+
     model = CountDownItem
     render_template = "fluentcms_countdown/countdown.html"
     category = _("Sidebar widgets")
@@ -46,9 +48,9 @@ class CountDownPlugin(ContentPlugin):
 def _to_locale_name(language_code):
     # Convert a language code (e.g. nl-nl) to a locale (nl-NL)
     # The locale uses a dash instead of _, to match the vendor filenames.
-    language_code = language_code.replace('_', '-')
-    if '-' in language_code:
-        language, country = language_code.split('-')
+    language_code = language_code.replace("_", "-")
+    if "-" in language_code:
+        language, country = language_code.split("-")
         return language_code, f"{language}-{country.upper()}"
     else:
         return language_code, language_code
