@@ -1,6 +1,16 @@
 fluentcms-countdown
 ===================
 
+.. image:: https://github.com/django-fluent/fluentcms-countdown/actions/workflows/tests.yaml/badge.svg?branch=master
+    :target: https://github.com/django-fluent/fluentcms-countdown/actions/workflows/tests.yaml
+.. image:: https://img.shields.io/pypi/v/fluentcms-countdown.svg
+    :target: https://pypi.python.org/pypi/fluentcms-countdown/
+.. image:: https://img.shields.io/pypi/l/fluentcms-countdown.svg
+    :target: https://pypi.python.org/pypi/fluentcms-countdown/
+.. image:: https://img.shields.io/codecov/c/github/django-fluent/fluentcms-countdown/master.svg
+    :target: https://codecov.io/github/django-fluent/fluentcms-countdown?branch=master
+
+
 A plugin for django-fluent-contents_ to show a countdown timer on a website.
 
 It's based on the jQuery plugin found at: http://keith-wood.name/countdown.html
